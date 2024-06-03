@@ -1,0 +1,15 @@
+<h1> Task </h1>
+{% for tarea in tareas%}
+<div>
+    <h1>{% if tarea.done == True %} ✅ {% else %}⏱️{% endif %} {{tarea.title}}</h1>
+    <p>{{tarea.description}}</p>
+    <p>{{tarea.project.name}}</p>
+    <button>
+        Delete
+     </buttton>
+    <button>
+        ✅ Done
+     </buttton>    
+</div>   
+{% endfor %}
+
